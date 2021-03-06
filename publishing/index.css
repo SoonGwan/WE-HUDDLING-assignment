@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#TopNav {
+  display: flex;
+  flex-direction: column;
+  height: 104px;
+}
+
+.TopNavWrapper {
+  top: 0;
+  width: 100%;
+  height: 53px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform ease 0.5s, box-shadow ease 0.3s;
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+}
+
+.DownNav {
+  transform: translateY(-53px);
+}
+
+.UpNav {
+  box-shadow: 0 0 0.3rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.UpSocial {
+  margin-top: 110px;
+}
+
+.DownSocial {
+  margin-top: 58px;
+}
+
+.SearchInput {
+  background-color: rgb(235, 238, 240);
+  width: 64vw;
+  height: 29px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.SearchInput > input {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  margin: 0px 12px;
+  font-size: 15px;
+}
+
+.SearchInput > input:focus {
+  outline: none;
+}
+
+.SearchInput:focus-within {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(121, 197, 244);
+}
+
+.SearchIcon {
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.SearchIcon > img {
+  width: 18.7px;
+  height: 18.7px;
+}
+
+.GoBack {
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+}
+
+.GoBack > img {
+  width: 22.5px;
+  height: 22.5px;
+}
+
+.More {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.More > img {
+  width: 22.5px;
+  height: 22.5px;
+}
+
+.BelowNav {
+  width: 100%;
+  height: 52px;
+  border-bottom: 1px solid rgb(235, 238, 240);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  scroll-padding: 43px;
+  margin-top: 53px;
+}
+
+.BelowItems {
+  font-size: 15px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CardWithImg {
+  width: 100%;
+  padding: 12px 16px;
+  display: flex;
+  border-bottom: 1px solid rgb(249, 249, 249);
+}
+
+.CardUserProfile {
+  display: flex;
+}
+
+.CardUserProfile > img {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+}
+
+.PostTop > * {
+  font-size: 15px;
+}
+
+.Nickname {
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+.UserId {
+  margin-left: 4px;
+  color: rgb(169, 175, 180);
+}
+
+.DateTime {
+  margin-left: 4px;
+  color: rgb(169, 175, 180);
+}
+
+.UserPostWrapper {
+  width: 100%;
+  margin-left: 8px;
+  word-break: break-all;
+}
+
+.PostTop {
+  display: flex;
+}
+
+.PostTitle {
+  font-size: 15px;
+}
+
+.UserUploadImg {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.UserUploadImg > img {
+  width: 100%;
+  height: 159px;
+  border-radius: 18px;
+}
+
+.PostSocialTab {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.AlertAuth {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 16px;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid rgb(249, 249, 249);
+}
+
+.AlertAuthWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.AlertAuthWrapper > * + * {
+  margin-left: 12px;
+}
+
+.AlertAuthWrapper > button {
+  width: 100%;
+  height: 30px;
+  border-radius: 24px;
+  font-size: 15px;
+}
+
+.AlertAuthWrapper > button:focus {
+  outline: none;
+}
+
+.AlertLoginBtn {
+  border: 1px solid rgb(29, 161, 242);
+  background-color: rgb(255, 255, 255);
+  color: rgb(29, 161, 242);
+}
+
+.AlertJoinBtn {
+  background-color: rgb(29, 161, 242);
+  color: white;
+  border: none;
+}
+
+.hashtag {
+  font-size: 15px;
+  color: rgb(27, 149, 224);
+}
+
+.hashtag:focus {
+  text-decoration: red;
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>#아침식사 - 트위터 검색 / 트위터</title>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div id="TopNav">
+      <div class="TopNavWrapper">
+        <div class="GoBack">
+          <img src="./icon/icons8-left-arrow-32.png" alt="" />
+        </div>
+        <div class="SearchInput">
+          <div class="SearchIcon">
+            <img src="./icon/icons8-search-30.png" alt="" />
+          </div>
+          <input type="text" placeholder="트위터 검색" />
+        </div>
+        <div class="More">
+          <img src="./icon/icons8-more-32.png" alt="" />
+        </div>
+      </div>
+
+      <div class="BelowNav">
+        <div class="BelowItems" id="Popular" onClick="selectNavItem(id);">
+          인기
+        </div>
+        <div class="BelowItems" id="UpToDate" onClick="selectNavItem(id)">
+          최신
+        </div>
+        <div class="BelowItems" id="User" onClick="selectNavItem(id)">
+          사용자
+        </div>
+        <div class="BelowItems" id="Photo" onClick="selectNavItem(id)">
+          사진
+        </div>
+        <div class="BelowItems" id="Video" onClick="selectNavItem(id)">
+          동영상
+        </div>
+      </div>
+    </div>
+    <div class="SocialSection" id="Social">
+      <div class="CardWithImg">
+        <div class="CardUserProfile">
+          <img src="./icon/icons8-test-account-48.png" alt="" />
+        </div>
+        <div class="UserPostWrapper">
+          <div class="PostTop">
+            <div class="Nickname">SoonGwan</div>
+            <div class="UserId">@HakMoin</div>
+            <div class="DateTime">3월2일</div>
+          </div>
+          <div class="PostTitle">
+            맛있게 먹고 건강해집시다.
+            <br />
+            현대인의 식습관에 위잇이 관여하기로 했습니다.
+            <br />
+            <span class="hashtag">#아무거나 먹지말기</span>
+            <span class="hashtag">#굶지말기</span>
+            <div class="UserUploadImg">
+              <img src="./img/mock1.jpeg" alt="" />
+            </div>
+          </div>
+          <div class="PostSocialTab">
+            <div class="Comment">
+              <img src="./icon/icons8-chat-bubble-19.png" alt="" />
+            </div>
+            <div class="Retweet">
+              <img src="./icon/icons8-retweet-19.png" alt="" />
+            </div>
+            <div class="Heart">
+              <img src="./icon/icons8-heart-19.png" alt="" />
+            </div>
+            <div class="Share">
+              <img src="./icon/icons8-upload-19.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="CardWithImg">
+        <div class="CardUserProfile">
+          <img src="./icon/icons8-test-account-48.png" alt="" />
+        </div>
+        <div class="UserPostWrapper">
+          <div class="PostTop">
+            <div class="Nickname">SoonGwan</div>
+            <div class="UserId">@HakMoin</div>
+            <div class="DateTime">3월2일</div>
+          </div>
+          <div class="PostTitle">
+            맛있게 먹고 건강해집시다.
+            <br />
+            현대인의 식습관에 위잇이 관여하기로 했습니다.
+            <br />
+            <span class="hashtag">#아무거나 먹지말기</span>
+            <span class="hashtag">#굶지말기</span>
+            <div class="UserUploadImg">
+              <img src="./img/mock1.jpeg" alt="" />
+            </div>
+          </div>
+          <div class="PostSocialTab">
+            <div class="Comment">
+              <img src="./icon/icons8-chat-bubble-19.png" alt="" />
+            </div>
+            <div class="Retweet">
+              <img src="./icon/icons8-retweet-19.png" alt="" />
+            </div>
+            <div class="Heart">
+              <img src="./icon/icons8-heart-19.png" alt="" />
+            </div>
+            <div class="Share">
+              <img src="./icon/icons8-upload-19.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="CardWithImg">
+        <div class="CardUserProfile">
+          <img src="./icon/icons8-test-account-48.png" alt="" />
+        </div>
+        <div class="UserPostWrapper">
+          <div class="PostTop">
+            <div class="Nickname">SoonGwan</div>
+            <div class="UserId">@HakMoin</div>
+            <div class="DateTime">3월2일</div>
+          </div>
+          <div class="PostTitle">
+            맛있게 먹고 건강해집시다.
+            <br />
+            현대인의 식습관에 위잇이 관여하기로 했습니다.
+            <br />
+            <span class="hashtag">#아무거나 먹지말기</span>
+            <span class="hashtag">#굶지말기</span>
+            <div class="UserUploadImg">
+              <img src="./img/mock1.jpeg" alt="" />
+            </div>
+          </div>
+          <div class="PostSocialTab">
+            <div class="Comment">
+              <img src="./icon/icons8-chat-bubble-19.png" alt="" />
+            </div>
+            <div class="Retweet">
+              <img src="./icon/icons8-retweet-19.png" alt="" />
+            </div>
+            <div class="Heart">
+              <img src="./icon/icons8-heart-19.png" alt="" />
+            </div>
+            <div class="Share">
+              <img src="./icon/icons8-upload-19.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="CardWithImg">
+        <div class="CardUserProfile">
+          <img src="./icon/icons8-test-account-48.png" alt="" />
+        </div>
+        <div class="UserPostWrapper">
+          <div class="PostTop">
+            <div class="Nickname">SoonGwan</div>
+            <div class="UserId">@HakMoin</div>
+            <div class="DateTime">3월2일</div>
+          </div>
+          <div class="PostTitle">
+            맛있게 먹고 건강해집시다.
+            <br />
+            현대인의 식습관에 위잇이 관여하기로 했습니다.
+            <br />
+            <span class="hashtag">#아무거나 먹지말기</span>
+            <span class="hashtag">#굶지말기</span>
+            <div class="UserUploadImg">
+              <img src="./img/mock1.jpeg" alt="" />
+            </div>
+          </div>
+          <div class="PostSocialTab">
+            <div class="Comment">
+              <img src="./icon/icons8-chat-bubble-19.png" alt="" />
+            </div>
+            <div class="Retweet">
+              <img src="./icon/icons8-retweet-19.png" alt="" />
+            </div>
+            <div class="Heart">
+              <img src="./icon/icons8-heart-19.png" alt="" />
+            </div>
+            <div class="Share">
+              <img src="./icon/icons8-upload-19.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="CardWithImg">
+        <div class="CardUserProfile">
+          <img src="./icon/icons8-test-account-48.png" alt="" />
+        </div>
+        <div class="UserPostWrapper">
+          <div class="PostTop">
+            <div class="Nickname">SoonGwan</div>
+            <div class="UserId">@HakMoin</div>
+            <div class="DateTime">3월2일</div>
+          </div>
+          <div class="PostTitle">
+            맛있게 먹고 건강해집시다.
+            <br />
+            현대인의 식습관에 위잇이 관여하기로 했습니다.
+            <br />
+            <span class="hashtag">#아무거나 먹지말기</span>
+            <span class="hashtag">#굶지말기</span>
+            <div class="UserUploadImg">
+              <img src="./img/mock1.jpeg" alt="" />
+            </div>
+          </div>
+          <div class="PostSocialTab">
+            <div class="Comment">
+              <img src="./icon/icons8-chat-bubble-19.png" alt="" />
+            </div>
+            <div class="Retweet">
+              <img src="./icon/icons8-retweet-19.png" alt="" />
+            </div>
+            <div class="Heart">
+              <img src="./icon/icons8-heart-19.png" alt="" />
+            </div>
+            <div class="Share">
+              <img src="./icon/icons8-upload-19.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="AlertAuth">
+      <div class="AlertAuthWrapper">
+        <button class="AlertLoginBtn">로그인</button>
+        <button class="AlertJoinBtn">가입하기</button>
+      </div>
+    </div>
+  </body>
+</html>
