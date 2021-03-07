@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SearchInput from '../common/SearchInput';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import styled from 'styled-components/native';
@@ -8,6 +8,7 @@ const HeaderWrapper = styled.View`
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  height: 52px;
 `;
 
 const GoBackImg = styled.Image`
