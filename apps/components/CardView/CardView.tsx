@@ -46,19 +46,19 @@ const UserContent = styled.View`
   margin-left: 8px;
 `;
 
-const CardView = () => {
+const CardView = ({ id, text }: any) => {
   return (
     <CardViewWrapper>
       <UserProfile />
       <TwitWrapper>
         <UserInfo>
-          <UserNickName>권순관</UserNickName>
+          <UserNickName>{id}</UserNickName>
           <UserInfoItem>@HakMoin</UserInfoItem>
           <UserInfoItem>·</UserInfoItem>
           <UserInfoItem>Mar 6</UserInfoItem>
         </UserInfo>
         <UserContent>
-          <Text>asd</Text>
+          <Text>{text}</Text>
         </UserContent>
       </TwitWrapper>
     </CardViewWrapper>
