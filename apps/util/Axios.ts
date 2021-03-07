@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { SERVER } from '../config/config.json';
+import { SERVER, BEARER_TOKEN } from '../config/config.json';
 import {
   IGetRequest,
   IPostRequest,
@@ -8,21 +8,10 @@ import {
 } from '../interface/IAxios';
 
 export const getRequest = async ({ url }: IGetRequest) => {
-  const data = await axios.get(`${SERVER}${url}`);
-  return data;
-};
-
-export const postRequest = async ({ url, request }: IPostRequest) => {
-  const data = await axios.post(`${SERVER}${url}`, request);
-  return data;
-};
-
-export const modifyRequest = async ({ url, request }: IModifyRequest) => {
-  const data = await axios.put(`${SERVER}${url}`, request);
-  return data;
-};
-
-export const deleteRequest = async ({ url }: IDeleteRequest) => {
-  const data = await axios.delete(`${SERVER}${url}`);
+  const data = await axios.get(`${SERVER}${url}`, {
+    headers: {
+      Authorization: `Bearer ${BEARER_TOKEN}`,
+    },
+  });
   return data;
 };
