@@ -12,12 +12,13 @@ import {
 import Nav from '../Nav';
 import styled from 'styled-components/native';
 import CardViewContainer from '../../container/CardViewContainer';
+import HeaderContainer from '../../container/HeaderContainer';
 
 const Main = () => {
   return (
     <SafeAreaView>
       <ScrollView scrollEventThrottle={10} stickyHeaderIndices={[1]}>
-        <Header />
+        <HeaderContainer />
         <Nav />
         <CardViewContainer />
       </ScrollView>

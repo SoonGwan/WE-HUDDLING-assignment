@@ -1,6 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Dispatch, SetStateAction } from 'react';
 import SearchInput from '../common/SearchInput';
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  NativeSyntheticEvent,
+  TextInputChangeEventData,
+} from 'react-native';
 import styled from 'styled-components/native';
 
 const HeaderWrapper = styled.View`
@@ -23,11 +30,21 @@ const MoreImg = styled.Image`
   margin-right: 12px;
 `;
 
-const Header = () => {
+interface IHeader {
+  handleSearch: () => void;
+  onChageSearch: (text: string) => void;
+  search: string;
+}
+
+const Header = ({ handleSearch, onChageSearch, search }: IHeader) => {
   return (
     <HeaderWrapper>
       <GoBackImg source={require('../../icon/icons8-left-arrow-32.png')} />
-      <SearchInput />
+      <SearchInput
+        handleSearch={handleSearch}
+        onChageSearch={onChageSearch}
+        search={search}
+      />
       <MoreImg source={require('../../icon/icons8-more-32.png')} />
     </HeaderWrapper>
   );
