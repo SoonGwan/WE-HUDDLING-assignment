@@ -46,14 +46,30 @@ const UserContent = styled.View`
   margin-left: 8px;
 `;
 
-const CardView = ({ id, text }: any) => {
+interface ICardView {
+  name: string;
+  text: string;
+  screen_name: string;
+  profile_image_url: string;
+}
+
+const CardView = ({
+  name,
+  text,
+  screen_name,
+  profile_image_url,
+}: ICardView) => {
   return (
     <CardViewWrapper>
-      <UserProfile />
+      <UserProfile
+        source={{
+          uri: profile_image_url,
+        }}
+      />
       <TwitWrapper>
         <UserInfo>
-          <UserNickName>{id}</UserNickName>
-          <UserInfoItem>@HakMoin</UserInfoItem>
+          <UserNickName>{name}</UserNickName>
+          <UserInfoItem>@{screen_name}</UserInfoItem>
           <UserInfoItem>·</UserInfoItem>
           <UserInfoItem>Mar 6</UserInfoItem>
         </UserInfo>

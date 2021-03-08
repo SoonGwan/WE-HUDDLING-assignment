@@ -8,7 +8,8 @@ import { TwitList } from '../../atom/TwitListAtom';
 
 const HeaderContainer = () => {
   const [search, setSearch] = useState('');
-  const [, setTwitMap] = useRecoilState<[]>(TwitList);
+  const [, setTwitMap] = useRecoilState<JSX.Element[]>(TwitList);
+  let searchList: any = [];
   const onChageSearch = (text: string) => {
     setSearch(text);
   };
@@ -23,14 +24,44 @@ const HeaderContainer = () => {
       const {
         data: { data },
       } = await TwitStore.searchTwit(search);
-      // console.log(data);
-      const list = data.map((data: { id: string; text: string }) => {
-        const { id, text } = data;
 
-        return <CardView id={id} text={text} />;
+      for (let i = 0; i < data.length; i += 1) {
+        searchList.push(data[i].author_id);
+      }
+
+      const res = await TwitStore.userLookUp(searchList.join(','));
+      let userWithInfoList = [];
+
+      for (let i = 0; i < res.data.length; i += 1) {
+        for (let j = 0; j < data.length; j += 1) {
+          if (data[j].author_id === res.data[i].id_str) {
+            const { text } = data[j];
+            const { name, screen_name, profile_image_url } = res.data[i];
+            console.log(res.data[i]);
+            let temp = {
+              name,
+              text,
+              screen_name,
+              profile_image_url,
+            };
+            userWithInfoList.push(temp);
+          }
+        }
+      }
+
+      const cardListMap = userWithInfoList.map((data) => {
+        const { name, screen_name, text, profile_image_url } = data;
+        return (
+          <CardView
+            name={name}
+            text={text}
+            screen_name={screen_name}
+            profile_image_url={profile_image_url}
+          />
+        );
       });
 
-      setTwitMap(list);
+      setTwitMap(cardListMap);
     } catch (err) {
       return err;
     }

@@ -1,6 +1,6 @@
 import { atom, RecoilState } from 'recoil';
 
-export const TwitList: RecoilState<any> = atom({
+export const TwitList = atom<JSX.Element[]>({
   key: 'default',
   default: [],
 });
