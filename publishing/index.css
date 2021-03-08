@@ -231,7 +231,3 @@
   font-size: 15px;
   color: rgb(27, 149, 224);
 }
-
-.hashtag:focus {
-  text-decoration: red;
-}
