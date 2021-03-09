@@ -1,13 +1,5 @@
-import React, { useEffect, Dispatch, SetStateAction } from 'react';
+import React from 'react';
 import SearchInput from '../common/SearchInput';
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  NativeSyntheticEvent,
-  TextInputChangeEventData,
-} from 'react-native';
 import styled from 'styled-components/native';
 
 const HeaderWrapper = styled.View`

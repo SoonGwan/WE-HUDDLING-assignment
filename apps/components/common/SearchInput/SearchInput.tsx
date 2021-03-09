@@ -1,14 +1,4 @@
-import React, { useState, PropsWithChildren } from 'react';
-import {
-  View,
-  Text,
-  TextInput,
-  Image,
-  TouchableOpacity,
-  Button,
-  NativeSyntheticEvent,
-  TextInputChangeEventData,
-} from 'react-native';
+import React, { useState } from 'react';
 import styled from 'styled-components/native';
 
 interface Props {

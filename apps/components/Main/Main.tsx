@@ -1,15 +1,6 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import Header from '../Header';
-import {
-  View,
-  SafeAreaView,
-  Text,
-  ScrollView,
-  NativeSyntheticEvent,
-  NativeScrollEvent,
-  Animated,
-} from 'react-native';
-import Nav from '../Nav';
+import { SafeAreaView, ScrollView } from 'react-native';
 import styled from 'styled-components/native';
 import HeaderContainer from '../../container/HeaderContainer';
 import { useRecoilValue } from 'recoil';

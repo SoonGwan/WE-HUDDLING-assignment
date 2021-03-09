@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import { Text } from 'react-native';
 
 const NavWarpper = styled.View`
   width: 100%;
