@@ -14,10 +14,10 @@ import styled from 'styled-components/native';
 import HeaderContainer from '../../container/HeaderContainer';
 import { useRecoilValue } from 'recoil';
 import { TwitList } from '../../atom/TwitListAtom';
-import SocialTab from '../common/SocialTab';
 import NavContainer from '../../container/NavContainer';
 import { Loading } from '../../atom/LoadingAtom';
 import SkeletonLoading from '../common/SkeletonLoading';
+import { StatusBar } from 'expo-status-bar';
 
 const CardViewWrapper = styled.View`
   width: 100%;
@@ -30,6 +30,7 @@ const Main = () => {
 
   return (
     <SafeAreaView>
+      <StatusBar />
       <CardViewWrapper>
         <ScrollView scrollEventThrottle={10} stickyHeaderIndices={[1]}>
           <HeaderContainer />
