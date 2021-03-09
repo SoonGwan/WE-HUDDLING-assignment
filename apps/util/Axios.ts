@@ -1,13 +1,8 @@
 import axios from 'axios';
 import { SERVER, BEARER_TOKEN } from '../config/config.json';
-import {
-  IGetRequest,
-  IPostRequest,
-  IModifyRequest,
-  IDeleteRequest,
-} from '../interface/IAxios';
+import { IPostRequest } from '../interface/IAxios';
 
-export const getRequest = async ({ url }: IGetRequest) => {
+export const PostRequest = async ({ url }: IPostRequest) => {
   const data = await axios.get(`${SERVER}${url}`, {
     headers: {
       Authorization: `Bearer ${BEARER_TOKEN}`,
