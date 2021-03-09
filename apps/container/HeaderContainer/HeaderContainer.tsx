@@ -47,10 +47,11 @@ const HeaderContainer = () => {
         }
       }
       setIsLoading(false);
-      const cardListMap = userWithInfoList.map((data) => {
+      const cardListMap = userWithInfoList.map((data, index) => {
         const { name, screen_name, text, profile_image_url } = data;
         return (
           <CardView
+            key={index}
             name={name}
             text={text}
             screen_name={screen_name}

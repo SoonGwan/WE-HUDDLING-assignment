@@ -20,7 +20,7 @@ const UserProfile = styled.View`
   width: 48px;
   height: 48px;
   background-color: #f2f2f2;
-  border-radius: 50;
+  border-radius: 50px;
 `;
 
 const UserInfo = styled.View`

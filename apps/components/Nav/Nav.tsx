@@ -33,7 +33,7 @@ const Nav = ({ selectItem, selectedItem }: INav) => {
     align-items: center;
     justify-content: center;
     border-bottom-width: ${(props: StyledProps) =>
-      props.item === selectedItem ? 2 : 0};
+      props.item === selectedItem ? '2px' : '0px'};
     border-bottom-color: ${(props: StyledProps) =>
       props.item === selectedItem ? 'rgb(29, 161, 242)' : 'black'};
   `;

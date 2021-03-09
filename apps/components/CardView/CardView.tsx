@@ -21,7 +21,7 @@ const UserProfile = styled.Image`
   width: 48px;
   height: 48px;
   background-color: white;
-  border-radius: 50;
+  border-radius: 50px;
 `;
 
 const UserInfo = styled.View`
