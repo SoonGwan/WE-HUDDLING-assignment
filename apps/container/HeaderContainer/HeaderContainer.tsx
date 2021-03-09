@@ -69,7 +69,7 @@ const HeaderContainer = () => {
   }, [search, setSearch]);
 
   useEffect(() => {
-    onChageSearch('아침식사');
+    onChageSearch('#아침식사');
     handleSearch();
   }, []);
 
