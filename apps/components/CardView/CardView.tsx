@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import styled from 'styled-components/native';
+import SocialTab from '../common/SocialTab';
 
 const CardViewWrapper = styled.View`
   width: 100%;
@@ -19,7 +20,7 @@ const TwitWrapper = styled.View`
 const UserProfile = styled.Image`
   width: 48px;
   height: 48px;
-  background-color: red;
+  background-color: white;
   border-radius: 50;
 `;
 
@@ -70,12 +71,11 @@ const CardView = ({
         <UserInfo>
           <UserNickName>{name}</UserNickName>
           <UserInfoItem>@{screen_name}</UserInfoItem>
-          <UserInfoItem>·</UserInfoItem>
-          <UserInfoItem>Mar 6</UserInfoItem>
         </UserInfo>
         <UserContent>
           <Text>{text}</Text>
         </UserContent>
+        <SocialTab />
       </TwitWrapper>
     </CardViewWrapper>
   );

@@ -35,10 +35,6 @@ const SearchInputWrapper = styled.View`
   border-radius: 24px;
   align-items: center;
   font-size: 15px;
-
-  &:focus {
-    background-color: red;
-  }
 `;
 
 const SearchImg = styled.Image`

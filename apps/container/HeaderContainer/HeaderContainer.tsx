@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Header from '../../components/Header';
 import TwitStore from '../../store/TwitStore';
 import { NativeSyntheticEvent, TextInputChangeEventData } from 'react-native';
@@ -7,20 +7,16 @@ import { useRecoilState } from 'recoil';
 import { TwitList } from '../../atom/TwitListAtom';
 
 const HeaderContainer = () => {
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState('아침식사');
   const [, setTwitMap] = useRecoilState<JSX.Element[]>(TwitList);
   let searchList: any = [];
+
   const onChageSearch = (text: string) => {
     setSearch(text);
   };
 
-  const handleSearch = async () => {
+  const handleSearch = useCallback(async () => {
     try {
-      if (search.trim().length <= 0) {
-        alert('입력해주세요!');
-        return;
-      }
-
       const {
         data: { data },
       } = await TwitStore.searchTwit(search);
@@ -37,7 +33,6 @@ const HeaderContainer = () => {
           if (data[j].author_id === res.data[i].id_str) {
             const { text } = data[j];
             const { name, screen_name, profile_image_url } = res.data[i];
-            console.log(res.data[i]);
             let temp = {
               name,
               text,
@@ -65,7 +60,13 @@ const HeaderContainer = () => {
     } catch (err) {
       return err;
     }
-  };
+  }, [search, setSearch]);
+
+  useEffect(() => {
+    onChageSearch('아침식사');
+    handleSearch();
+  }, []);
+
   return (
     <Header
       handleSearch={handleSearch}
