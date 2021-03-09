@@ -10,7 +10,7 @@ const CardViewWrapper = styled.View`
   flex-wrap: wrap;
   flex-direction: row;
   border-bottom-color: rgb(249, 249, 249);
-  border-bottom-width: 2;
+  border-bottom-width: 2px;
 `;
 
 const TwitWrapper = styled.View`

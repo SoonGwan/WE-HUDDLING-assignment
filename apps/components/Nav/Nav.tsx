@@ -11,7 +11,7 @@ const NavWarpper = styled.View`
   align-items: center;
   background-color: rgb(255, 255, 255);
   border-bottom-color: rgb(235, 238, 240);
-  border-bottom-width: 2;
+  border-bottom-width: 2px;
 `;
 
 interface INav {
