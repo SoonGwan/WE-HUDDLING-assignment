@@ -71,9 +71,7 @@ const SkeletonLoading = () => {
           <UserNickName></UserNickName>
           <UserInfoItem></UserInfoItem>
         </UserInfo>
-        <UserContent>
-          <Text></Text>
-        </UserContent>
+        <UserContent></UserContent>
         <SocialTab />
       </TwitWrapper>
     </CardViewWrapper>
