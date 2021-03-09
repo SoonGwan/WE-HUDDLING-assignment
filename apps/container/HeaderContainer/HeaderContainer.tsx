@@ -1,14 +1,16 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Header from '../../components/Header';
 import TwitStore from '../../store/TwitStore';
-import { NativeSyntheticEvent, TextInputChangeEventData } from 'react-native';
 import CardView from '../../components/CardView';
 import { useRecoilState } from 'recoil';
 import { TwitList } from '../../atom/TwitListAtom';
+import { Loading } from '../../atom/LoadingAtom';
 
 const HeaderContainer = () => {
   const [search, setSearch] = useState('아침식사');
   const [, setTwitMap] = useRecoilState<JSX.Element[]>(TwitList);
+  const [, setIsLoading] = useRecoilState<Boolean>(Loading);
+
   let searchList: any = [];
 
   const onChageSearch = (text: string) => {
@@ -17,6 +19,7 @@ const HeaderContainer = () => {
 
   const handleSearch = useCallback(async () => {
     try {
+      setIsLoading(true);
       const {
         data: { data },
       } = await TwitStore.searchTwit(search);
@@ -43,7 +46,7 @@ const HeaderContainer = () => {
           }
         }
       }
-
+      setIsLoading(false);
       const cardListMap = userWithInfoList.map((data) => {
         const { name, screen_name, text, profile_image_url } = data;
         return (
@@ -58,6 +61,8 @@ const HeaderContainer = () => {
 
       setTwitMap(cardListMap);
     } catch (err) {
+      setIsLoading(false);
+
       return err;
     }
   }, [search, setSearch]);
